@@ -1,0 +1,10 @@
+name: loans_prediction
+dependencies:
+  - python=3.6
+  - pip:
+    - scikit-learn
+    - Flask
+    - Flask-RESTful
+    - pandas
+    - xgboost
+    - gunicorn # for app deployment
