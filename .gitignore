@@ -1,0 +1,11 @@
+./data
+./models
+venv/
+.env
+
+*.pyc
+__pycache__/
+
+instance/
+.idea
+notes
