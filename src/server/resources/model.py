@@ -22,6 +22,9 @@ class Predict(Resource):
         args = parser.parse_args()
         raw_json = args["json_data"]
         prediction = model.predict(parse_json(raw_json))
+        probabilities = model.predict_probability(parse_json(raw_json))
+        approve_loan_probability = probabilities[0][prediction[0]]
 
         # FIXME - find how to send it correct
-        return jsonify(str(prediction[0]))
+        return jsonify({"prediction": prediction[0],
+                        "probability": approve_loan_probability})
