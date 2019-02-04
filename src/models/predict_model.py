@@ -37,8 +37,10 @@ if __name__ == '__main__':
     # TODO - Add tests
     # TODO - read and apply cross validation and GridSearch
     model = Model()
-    print(model.predict(row_to_predict_reshaped))
-    print(model.predict_probability(row_to_predict_reshaped))
+    prediction = model.predict(row_to_predict_reshaped)
+    probabilities = model.predict_probability(row_to_predict_reshaped)
+    approve_loan_probability = probabilities[0][prediction[0]]
+    print(approve_loan_probability)
 
 
 

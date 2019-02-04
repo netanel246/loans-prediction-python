@@ -1,5 +1,5 @@
 import pandas as pd
-from server import abort
+from flask_restful import abort
 from sklearn.impute import SimpleImputer
 from xgboost import DMatrix
 import numpy as np
